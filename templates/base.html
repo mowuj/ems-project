@@ -19,11 +19,11 @@
     integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Icons -->
-    <link href="{% static 'dist/vendors/css/font-awesome.min.css' %}" rel="stylesheet">
-    <link href="{% static 'dist/vendors/css/simple-line-icons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'simple-line-icons.min.css' %}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <!-- Main styles for this application -->
-    <link href="{% static 'dist/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
 
 
 </head>
@@ -318,10 +318,10 @@
 
         <!--JS-->
         <!-- Bootstrap and necessary plugins -->
-        <script src="{% static 'dist/vendors/js/jquery.min.js' %}"></script>
-        <script src="{% static 'dist/vendors/js/popper.min.js' %}"></script>
-        <script src="{% static 'dist/vendors/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'dist/vendors/js/pace.min.js' %}"></script>
+        <script src="{% static 'jquery.min.js' %}"></script>
+        <script src="{% static 'popper.min.js' %}"></script>
+        <script src="{% static 'bootstrap.min.js' %}"></script>
+        <script src="{% static 'pace.min.js' %}"></script>
 
         <!-- Plugins and scripts required by all views -->
         <!--Chart JS is commented out due to console errors-->
@@ -329,12 +329,12 @@
 
         <!-- CoreUI main scripts -->
 
-        <script src="{% static 'dist/js/app.js' %}"></script>
+        <script src="{% static 'app.js' %}"></script>
 
         <!-- Plugins and scripts required by this views -->
 
         <!-- Custom scripts required by this view -->
-        <script src="{% static 'dist/js/views/main.js' %}"></script>
+        <script src="{% static 'main.js' %}"></script>
         <script src="{% static 'custom.js' %}"></script>
         {% block js %}
           
