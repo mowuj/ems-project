@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>New Application</title>
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <div class="row d-flex justify-content-center mt-3">
+        <div class="col-md-6 mt-2 mb-3 ">
+            <h4 class="bg-primary text-center text-light badge-pill p-3">Today Leaves</h4>
+        </div>
+    </div>
+    <div class="m-auto col-md-10">
+
+        {% if today_leave %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Cause Of leave</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in today_leave %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{i.user.username}}</td>
+                    
+                    <td>{{i.start_date}}</td>
+                    <td>{{i.end_date}}</td>
+                    <td>{{i.cause_of_leave}}</td>
+                    
+                </tr>
+                {% endfor %}
+
+
+            </tbody>
+        </table>
+        {% else %}
+        <h4 class="text-muted text-center">No Leave Today!</h4>
+        {% endif %}
+    </div>
+</div>
+{% endblock body %}
