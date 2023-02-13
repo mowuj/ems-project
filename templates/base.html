@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Circle Fintech">
+    <meta name="author" content="My Company">
     <meta name="keyword" content="">
 
     <title>My Company</title>
@@ -146,6 +146,29 @@
                                 <a class="nav-link" href="">
                                     <i class="nav-icon icon-puzzle"></i> Edit Department</a>
                             </li> -->
+                            {% endif %}
+                    
+                    
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-user"></i> Posts</a>
+                        <ul class="nav-dropdown-items">
+                    
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'post' %}">
+                                    <i class="nav-icon icon-puzzle"></i> Posts</a>
+                            </li>
+                            {% if user.is_superuser %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'add-post' %}">
+                                    <i class="nav-icon icon-puzzle"></i> Add Post</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                                    <a class="nav-link" href="">
+                                                        <i class="nav-icon icon-puzzle"></i> Edit Department</a>
+                                                </li> -->
                             {% endif %}
                     
                     

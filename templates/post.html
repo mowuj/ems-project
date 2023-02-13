@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Departments</title>
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <div class="row d-flex justify-content-center mt-3">
+        <div class="col-md-6 mt-2 mb-3 ">
+            <h4 class="bg-primary text-center text-light badge-pill p-3">Our Posts</h4>
+        </div>
+    </div>
+    <div class="row">
+        {% for i in all_post %}
+        <div class="col-md-3">
+            <div class="card text-center">
+                
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'edit-post' i.id %}">{{i.name}}</a></h5>
+                    <p class="card-text">Salary: {{i.salary}}</p>
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock body %}

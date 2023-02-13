@@ -186,3 +186,13 @@ class ClientForm(ModelForm):
             'phone': forms.TextInput(attrs={'class': 'form-control bg-light badge-pill p-2 m-2', 'placeholder': 'Client Phone...'}),
             'company_name': forms.TextInput(attrs={'class': 'form-control bg-light badge-pill p-2 m-2', 'placeholder': 'Company Name...'}),
         }
+
+
+class PostForm(ModelForm):
+    class Meta:
+        model=Post
+        fields="__all__"
+        widgets={
+            'name': forms.TextInput(attrs={'class': 'form-control bg-light badge-pill p-2 m-2', 'placeholder': 'Post Name...'}),
+            'salary': forms.TextInput(attrs={'class': 'form-control bg-light badge-pill p-2 m-2', 'placeholder': 'Salary...'}),
+        }

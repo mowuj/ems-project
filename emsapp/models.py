@@ -19,6 +19,7 @@ class Department(models.Model):
 
 
 class Post(models.Model):
+    
     name = models.CharField(max_length=150)
     salary=models.IntegerField(blank=True, null=True)
     def __str__(self):

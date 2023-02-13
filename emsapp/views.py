@@ -133,6 +133,29 @@ def post(request):
     all_post=Post.objects.all()
     return render(request,'post.html',{'all_post':all_post})
 
+def edit_post(request,id):
+    post=Post.objects.get(id=id)
+    form=PostForm(instance=post)
+    if request.method=='POST':
+        form=PostForm(request.POST,instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('post')
+    context={'form':form}
+    return render(request,'edit-post.html',context)
+
+def add_post(request):
+    form=PostForm()
+    if request.method=='POST':
+        form=PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            context={'form':form}
+            return redirect('post')
+    form=PostForm()
+    context={'form':form}
+    return render(request,'add-post.html',context)
+
 @login_required(login_url='login')
 def add_employee(request):
     form = EmployeeAddForm()
