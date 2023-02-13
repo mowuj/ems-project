@@ -130,8 +130,9 @@ def edit_department(request,id):
 
 @login_required(login_url='login')
 def post(request):
+    dept=Department.objects.all()
     all_post=Post.objects.all()
-    return render(request,'post.html',{'all_post':all_post})
+    return render(request,'post.html',{'dept':dept,'all_post':all_post})
 
 def edit_post(request,id):
     post=Post.objects.get(id=id)

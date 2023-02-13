@@ -19,7 +19,8 @@ class Department(models.Model):
 
 
 class Post(models.Model):
-    
+    department=models.ForeignKey(
+        Department, on_delete=models.CASCADE, default='', blank=True, null=True,related_name='dept_set')
     name = models.CharField(max_length=150)
     salary=models.IntegerField(blank=True, null=True)
     def __str__(self):
