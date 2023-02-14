@@ -1,89 +1,24 @@
 
-Employee Management System [Live site](https://employee92.pythonanywhere.com/).
+###Employee Management System [Live site](https://employee92.pythonanywhere.com/).
 
 ## Project Description
-* This is a Manufacturer system
-* Home page show a navbar banner service to other section and footer
-* service is a protected route and here details of all service and you can booking
-* perchase is a Protected route here you book your service
-* payment is also Protected route and here you can payment vai card
-* dash board has many nested route some route for users and some for admin
-* my order page show user order
-* add tools page only admin can add a tools
+* This is a management system website.
+* On this website employee register, attendance system, meeting management system, and leave management system are Implemented.
+* There are two individual dashboards for employees and admin.
+* Only admin can see the Employee list and register and delete employees.
+* And also can see the attendance chart and Employee details.
+* And also can permit meeting and leave form.
+* An employee could edit their 
+profile and see his/her department members list.
+* And could add meetings and apply for leave 
+and give their attendance
 
 ## Technology use in the project
-* React Route
-* React tailwind
-* daisy ui
-* React Icons
-* React Toastify
-* Firebase 
-* Firebase hooks
-* stripe
-*heroku server
-* mongodb database
-In the project directory, you can run:
-
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Python
+* Django
+* Bootstrap
+* Django Filters
+* Crispy Forms
+* Django Query
+* Function Based View
+* Fontawesome
