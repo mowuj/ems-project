@@ -14,6 +14,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 
+@login_required(login_url='login')
 def create_user(request):
     if request.method == 'POST':
         fm = SignUpForm(data=request.POST)
@@ -133,7 +134,7 @@ def post(request):
     dept=Department.objects.all()
     all_post=Post.objects.all()
     return render(request,'post.html',{'dept':dept,'all_post':all_post})
-
+@login_required(login_url='login')
 def edit_post(request,id):
     post=Post.objects.get(id=id)
     form=PostForm(instance=post)
@@ -144,7 +145,7 @@ def edit_post(request,id):
             return redirect('post')
     context={'form':form}
     return render(request,'edit-post.html',context)
-
+@login_required(login_url='login')
 def add_post(request):
     form=PostForm()
     if request.method=='POST':
