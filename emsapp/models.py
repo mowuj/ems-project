@@ -17,7 +17,6 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
-
 class Post(models.Model):
     department=models.ForeignKey(
         Department, on_delete=models.CASCADE, default='', blank=True, null=True,related_name='dept_set')
@@ -32,7 +31,6 @@ class Division(models.Model):
     def __str__(self):
         return self.name
 
-
 class District(models.Model):
     division = models.ForeignKey(
         Division, on_delete=models.CASCADE, default='', blank=True, null=True)
@@ -40,7 +38,6 @@ class District(models.Model):
 
     def __str__(self):
         return self.name
-
 
 class Employee(models.Model):
     user = models.OneToOneField(
@@ -50,7 +47,7 @@ class Employee(models.Model):
     district = models.ForeignKey(
         District, on_delete=models.CASCADE, default='', blank=True, null=True, related_name='district_set')
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
-                            blank=True, null=True, related_name='post_set', default='')
+            blank=True, null=True, related_name='post_set', default='')
     employee_id = models.CharField(max_length=150, blank=True, null=True)
     name = models.CharField(max_length=150, blank=True, null=True)
     ssc = models.FloatField(blank=True, null=True)
@@ -73,7 +70,6 @@ class Employee(models.Model):
             output_size = (200, 200)
             img.thumbnail(output_size)
             img.save(self.image.path)
-
     def __str__(self):
         return str(self.user)
 
@@ -85,19 +81,15 @@ class Leave(models.Model):
     apply_date = models.DateField(auto_now_add=True)
     check_status = models.BooleanField(default=False)
     approve_status = models.BooleanField(default=False)
-
     def __str__(self):
         return str(self.user)
-
 
 class Holiday(models.Model):
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
     Description = models.CharField(max_length=150)
-
     def __str__(self):
         return str(self.Description)
-
 
 class DailyTask(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -109,10 +101,8 @@ class DailyTask(models.Model):
     issue_date = models.DateTimeField(auto_now_add=True)
     delivery = models.DateField(
         auto_now_add=False, blank=True, null=True)
-
     def __str__(self):
         return str(self.user) + " " + str(self.title)
-
 
 class Meeting(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -123,22 +113,18 @@ class Meeting(models.Model):
     def __str__(self):
         return str(self.user)
 
-
 class Client(models.Model):
     client_name = models.CharField(max_length=150)
     client_id = models.CharField(max_length=150, blank=True, null=True)
     company_name = models.CharField(max_length=150, blank=True, null=True)
     email = models.EmailField()
     phone = models.CharField(max_length=15)
-
     def __str__(self):
         return str(self.client_name)
-
 
 class Attendance(models.Model):
     attender = models.ForeignKey(User, on_delete=models.CASCADE)
     datetime = models.DateTimeField(auto_now_add=True)
-
     def __str__(self):
         return str(self.attender.username) + " " + str(self.datetime)[:19]
     
